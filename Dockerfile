@@ -1,11 +1,13 @@
-FROM node:alpine3.20
+FROM node:alpine
 
 WORKDIR /home/app
 
-COPY . /home/app
+COPY package.json .
 
 RUN npm install --force
 
-EXPOSE 27017
+COPY . /home/app
 
-CMD [“npm”, “run start”]
+EXPOSE 5001
+
+CMD ["npm", "run", "start"]
