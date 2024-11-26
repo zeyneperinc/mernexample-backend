@@ -7,11 +7,15 @@ on:
   push:
     branches: [ "main" ]
 
+
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
     - run: find / -name "Dockerfile"
     - run: docker build -t ghcr.io/zeyneperinc/server:latest . -f ../../Dockerfile
     - run: docker push ghcr.io/zeyneperinc/server:latest
