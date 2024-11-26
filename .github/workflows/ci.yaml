@@ -20,3 +20,8 @@ jobs:
       run: echo "${{ secrets.CR_PAT }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
     - run: docker build -t ghcr.io/zeyneperinc/server:latest . -f /home/runner/work/mernexample-server/mernexample-server/Dockerfile
     - run: docker push ghcr.io/zeyneperinc/server:latest
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - run: helm upgrade -i server -n mern /home/runner/work/mernexample-server/mernexample-server/helm/
