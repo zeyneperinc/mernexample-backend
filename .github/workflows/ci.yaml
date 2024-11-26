@@ -16,5 +16,5 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-    - run: docker build -t ghcr.io/zeyneperinc/server:latest . -f ../../Dockerfile
+    - run: docker build -t ghcr.io/zeyneperinc/server:latest . -f /home/runner/work/mernexample-server/mernexample-server/Dockerfile
     - run: docker push ghcr.io/zeyneperinc/server:latest
