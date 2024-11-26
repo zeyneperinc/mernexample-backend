@@ -12,7 +12,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - run: pwd
-    - run: ls
+    - run: find / -name "Dockerfile"
     - run: docker build -t ghcr.io/zeyneperinc/server:latest . -f ../../Dockerfile
     - run: docker push ghcr.io/zeyneperinc/server:latest
