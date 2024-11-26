@@ -23,5 +23,6 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    needs: [ build ]
     steps:
     - run: helm upgrade -i server -n mern /home/runner/work/mernexample-server/mernexample-server/helm/
