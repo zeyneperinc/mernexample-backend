@@ -4,5 +4,5 @@ metadata:
   name: server-config
 data:
   database_host: {{ .Values.database.mern.host }}
-  database_port: "27017"
+  database_port: 27017
   database_name: {{ .Values.database.mern.name }}

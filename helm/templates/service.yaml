@@ -8,7 +8,7 @@ spec:
   type: ClusterIP # Servis tipi: İç ağ (diğer pod'lar için erişim sağlar)
   ports:
     - port: 5001 # Kubernetes içindeki servis portu
-      targetPort: 27017 # Container'ın expose ettiği port
+      targetPort: 27017 # Container'ın expose ettiği port 5000000001 mi
       protocol: TCP
       #name: http
   selector:
