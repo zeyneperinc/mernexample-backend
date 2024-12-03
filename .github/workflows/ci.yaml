@@ -40,4 +40,4 @@ jobs:
       run: |
         aws eks update-kubeconfig --name mern-eks-cluster --region ${{ secrets.AWS_REGION }}
   
-    - run: helm upgrade -i server -n mern helm/
+    - run: helm upgrade -i server -n mern /home/runner/work/mernexample-server/mernexample-server/helm/
