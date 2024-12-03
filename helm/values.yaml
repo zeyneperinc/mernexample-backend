@@ -110,3 +110,5 @@ mongodb:
     username: server-user
     password: "LL`<i7w[8<!5"
     database: mern-database
+  persistence:
+    storageClass: "gp2"
