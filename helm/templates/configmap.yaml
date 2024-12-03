@@ -2,7 +2,9 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: server-config
+  annotations:
+    "helm.sh/hook": pre-install,pre-upgrade
 data:
   database_host: {{ .Values.database.mern.host }}
-  database_port: 27017
+  database_port: "27017"
   database_name: {{ .Values.database.mern.name }}
