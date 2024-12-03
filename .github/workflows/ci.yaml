@@ -38,6 +38,6 @@ jobs:
         version: 'latest'
     - name: Update kubeconfig for EKS
       run: |
-        aws eks update-kubeconfig --name <cluster-name> --region ${{ secrets.AWS_REGION }}
+        aws eks update-kubeconfig --name mern-eks-cluster--region ${{ secrets.AWS_REGION }}
   
     - run: helm upgrade -i server -n mern /home/runner/work/mernexample-server/mernexample-server/helm/
